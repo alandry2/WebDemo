@@ -3,13 +3,24 @@
   <groupId>web2</groupId>
   <artifactId>web2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging> <!-- Specify that the project is a WAR -->
+  
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
           <release>22</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version> <!-- Add the WAR plugin -->
+        <configuration>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory> <!-- Adjust if necessary -->
         </configuration>
       </plugin>
     </plugins>
